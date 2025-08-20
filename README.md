@@ -46,7 +46,7 @@ If the pill doesn’t appear:
 
 Solution:
 
--   take URL and put in new tap.
+-   take URL and put in new tab.
 
 ## Configuration
 
