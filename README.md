@@ -25,7 +25,7 @@ A Tampermonkey userscript that captures LinkedIn Voyager Job API responses for t
 
 1.  Install Tampermonkey (or Violentmonkey) in your browser.
 2.  Click the raw link to your script in GitHub to trigger installation, e.g.:
-    -   [https://raw.githubusercontent.com/](https://raw.githubusercontent.com/)//main/li-voyager-job-stats-pill.user.js
+    -   [Script](https://github.com/AbdullahHanfi/Extend-LinkedIn-Jobs/releases/download/v1.1.0/job-stats-pill.user.js)
 3.  Approve the install prompt. Tampermonkey will auto-update based on the  @version  field.
 
 Alternatively, create a new userscript in Tampermonkey and paste the script contents.
@@ -50,26 +50,25 @@ Solution:
 
 ## Configuration
 
-The script injects the pill next to a specific element controlled by LinkedIn’s React app. If LinkedIn changes their DOM, update  TARGET_SELECTOR.
+The script injects the pill above to a specific element controlled by LinkedIn’s React app. If LinkedIn changes their DOM, update  TARGET_SELECTOR.
 
 -   Open the script and edit the  TARGET_SELECTOR  constant:
 
 ```js
-const TARGET_SELECTOR = 'body > div:nth-child(42) > ... > span:nth-child(5)';
+const TARGET_SELECTOR = '.job-details-fit-level-preferences';
 ```
 
 Tips for choosing a resilient selector:
 
--   Prefer stable attributes (data-test-id,  aria-label) over deep  :nth-child  chains.
 -   Use a short path that still uniquely identifies the spot where you want the pill.
 -   After updating, refresh the job page.
 
 Styling:
 
 -   You can tweak the pill look by editing the injected CSS in the script:
-    -   .li-job-stats
-    -   .li-job-stat
-    -   .li-job-stats .sep
+    -   ``.li-job-stats``
+    -   ``.li-job-stat``
+    -   ``.li-job-stats .sep``
 
 ## Dev and extension hooks
 
