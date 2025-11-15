@@ -5,7 +5,10 @@ A Tampermonkey userscript that captures LinkedIn Voyager Job API responses for t
 -   File:  ``job-stats-pill.user.js``  
 -   Match:  ``https://www.linkedin.com/*``
 -   Run-at:  ``document-start``
-
+# Linked changes 
+-  Linked In change it's apis in 14/11/2025 and stop sending int value for application 
+-  Linked In send now value like ``Cairo, Cairo, Egypt · Reposted 3 hours ago · Over 100 people clicked applyPromoted by hirer · Responses managed off LinkedIn"
+``
 ## What it does
 
 -   Intercepts  fetch  and  XMLHttpRequest  calls matching  /voyager/api/jobs/.../{currentJobId}.
@@ -144,3 +147,4 @@ Use at your own risk. Automating or modifying the LinkedIn experience may be res
     -   Add sticky pill that re-attaches across React re-renders
     -   Add robust XHR reader for multiple response types
     -   Add SPA navigation detection and helper APIs
+
